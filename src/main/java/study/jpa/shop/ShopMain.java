@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMain {
+public class ShopMain {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("shop");
         EntityManager em = emf.createEntityManager();
@@ -16,7 +16,7 @@ public class JpaMain {
         try {
             tx.commit();
         } catch (Exception e) {
-            tx.rollback();
+            tx.roellback();
         } finally {
             em.close();
             emf.close();
