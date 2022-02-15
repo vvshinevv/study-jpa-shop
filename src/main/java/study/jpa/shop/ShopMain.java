@@ -16,7 +16,7 @@ public class ShopMain {
         try {
             tx.commit();
         } catch (Exception e) {
-            tx.roellback();
+            tx.rollback();
         } finally {
             em.close();
             emf.close();
